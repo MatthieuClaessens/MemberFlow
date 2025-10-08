@@ -1,3 +1,10 @@
+/*
+	index.css
+
+	Fichier d'entrée pour TailwindCSS. Il importe les layers de base, components
+	et utilities. Les classes Tailwind sont utilisées directement dans les JSX.
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

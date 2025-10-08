@@ -1,6 +1,21 @@
+/*
+    FormPerson.jsx
+
+    Composant React pour créer ou modifier une personne.
+    - Si une `id` est présente dans l'URL (route /person/:id/edit), le composant récupère
+        les données via `PersonService.getPerson(id)` et pré-remplit le formulaire.
+    - Permet de créer (POST /person) ou mettre à jour (PUT /person/{id}) une personne.
+    - Le champ ID est affiché en lecture seule lors de l'édition.
+    - Validation simple côté client : le bouton "Enregistrer" reste désactivé tant que
+        le prénom ou le nom sont vides.
+
+    Notes d'utilisation :
+    - Props : optionnellement `person` (objet) pour pré-remplir le formulaire depuis un parent.
+    - Routes attendues : /person/create (création) ou /person/:id/edit (édition).
+*/
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Save, UserPlus, UserCheck } from 'lucide-react';
-import './formperson.css';
 import PersonService from '../service/PersonService';
 import { useNavigate, useParams } from 'react-router-dom';
 

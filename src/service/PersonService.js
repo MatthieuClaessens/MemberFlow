@@ -1,3 +1,17 @@
+/*
+  PersonService.js
+
+  Client léger pour appeler l'API backend concernant les personnes.
+  - getAll(): récupérer toutes les personnes (GET /persons)
+  - getPerson(id): récupérer une personne par id (GET /person/{id})
+  - createPerson(firstname, lastname): créer une personne (POST /person)
+  - editPerson(id, firstname, lastname): modifier une personne (PUT /person/{id})
+  - deletePerson(id): supprimer une personne (DELETE /person/{id})
+
+  Ce fichier utilise axios configuré dans `http-common.js` pour gérer l'URL de base
+  et les en-têtes JSON.
+*/
+
 import http from "../http-common";
 
 // Récupérer toutes les personnes
